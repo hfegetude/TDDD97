@@ -1,0 +1,10 @@
+REATE TABLE "user_data"(
+email text,
+password text,
+familyname text,
+gender text,
+city text,
+country text,
+token int, firstname text);
+
+CREATE TABLE b (user text, message text);

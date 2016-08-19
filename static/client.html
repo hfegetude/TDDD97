@@ -1,0 +1,140 @@
+<html>
+	<title>Twidder: The social Network</title>
+
+	<head>
+		 <link rel="icon" href="wimage.ico" type="image/x-icon">
+		<link href="client.css" type="text/css" rel="stylesheet">  
+		<script src="client.js" type="text/javascript"></script>
+		<script src="sha256.js" type="text/javascript"></script>
+		<script type="text/view" id ="WelcomePageLoad">
+		<div class="CenterBox" id="WelcomePage"  >
+			<div id="TwidderLogo">
+				
+			</div>
+			<div id="SignIn">
+
+					<form id="FormSignIn"  >
+	  					User email:<br>
+	  					<input type="text" id="SignInEmail"><br>
+	  					User password:<br>
+	  					<input type="password" id="SignInPass">
+	  					<button type="submit" >Sign in</button>
+					</form>
+					
+			</div>
+			<div id="SignUp">
+				<div id="FormSignUp">
+				User name:
+	  			<input type="text" id="SignUpName"><br>
+	  			Family Name:
+	  			<input type="text" id="SignUpFamName"><br>
+	  			Gender:
+	  			<select id="SignUpGender"> 
+	  				<option value="Male"> Male </option>
+	  				<option value="Female"> Female </option>
+	  				<option value="Cheese"> Cheese</option>
+	  			<select><br>
+	  			City:
+	  			<input type="text" id="SignUpCity"><br>
+	  			Country:
+	  			<input type="text" id="SignUpCountry"><br>
+	  			e-mail:
+	  			<input type="text" id="SignUpEmail"><br>
+	  			password:
+	  			<input type="password" id="SignUpPass"><br>
+	  			rep-password:
+	  			<input type="password" id="SignUpRPass"><br>
+	  			<button type="SubmitSignUp" onclick="SignUpButton()" >Sign Up!</button>
+	  			</div>
+	  			<p id="ErrorInSignUp"> </p>
+			</div>
+		</div>
+		</script>
+		<script type="text/view" id="MenuBarLoad">
+		<div id="MenuBar">
+			<div class="MenuBarTab" id="MenuBarHome" onclick = "HomeTab()" >Home</div>
+			<div class="MenuBarTab" id="MenuBarAccount" onclick = "AccountTab()">Account</div>
+			<div class="MenuBarTab" id="MenuBarBrowse" onclick = "BrowseTab()">Browse</div>
+			<div class="MenuBarTab" id="MenuBarLogOut" onclick="LogOut()">LogOut</div>
+			<div id="WelcomeNameTab"></div>
+		</div>
+		</script>
+		
+		<script type="text/view" id="AccountTabLoad">
+		<div class="CenterBox" id="AccountTab" >
+			<div id="AccountTabInput">
+				Old password:
+				<input type="text" id="AccountTabOldPass"><br>
+				New password:
+				<input type="text" id="AccountTabNewPass"><br>
+				Repeat new password:
+				<input type="text" id="AccountTabNewRPass"><br>
+				<p id="AccountTabText"></p><br>
+				<button onclick="ChangePassword()" >Change Password</button>
+
+			</div>
+		</div>
+		</script>
+
+		<script type="text/view" id="HomeTabLoad">
+		<div class= "CenterBox" id="HomeTab">
+			<div class="UserData" id="HomeTabUserData">
+				Name: <p id = "HomeTabNameSpace" draggable="true" ondragstart="drag(event)" ></p>
+				Family name: <p id = "HomeTabFamNameSpace" draggable="true" ondragstart="drag(event)"></p>
+				Gender: <p id = "HomeTabGenderSpace" draggable="true" ondragstart="drag(event)"></p>
+				City: <p id = "HomeTabCitySpace" draggable="true" ondragstart="drag(event)"></p>
+				Country: <p id = "HomeTabCountrySpace" draggable="true" ondragstart="drag(event)"></p>
+				e-mail: <p id = "HomeTabEmailSpace" draggable="true" ondragstart="drag(event)"></p>
+			</div>
+			<div class="MessageWall" id="HomeUserMessageWall">
+				<div class="WrittenSpot" id="MessageWallWrittenSpot">
+				</div>
+				<div class="ActionButtons" id="ActionButtonsHometab">
+					<button id="WritteHomeTab" onclick="WritteHomeTab()">Write</button>
+					<input type="text" id="HomeTabUserText" ondrop="drop(event)" ondragover="allowDrop(event)">
+					<button id="RefreshHomeTab" onclick="RefreshHomeTab()">Refresh</button>
+				</div>
+			</div>
+		</div>
+		</script>
+		<script type="text/view" id="BrowseTabLoad">
+		<div class= "CenterBox" id="BrowseTab">
+			<div class="UserData" id="BrowseTabUserData">
+				Name: <p id = "BrowseTabNameSpace"></p>
+				Family name: <p id = "BrowseTabFamNameSpace"></p>
+				Gender: <p id = "BrowseTabGenderSpace"></p>
+				City: <p id = "BrowseTabCitySpace"></p>
+				Country: <p id = "BrowseTabCountrySpace"></p>
+				e-mail: <p id = "BrowseTabEmailSpace"></p>
+			</div>
+			<div  class="MessageWall" id="BrowseUserMessageWall">
+				<div class="WrittenSpot" id="BrowseMessageWallWrittenSpot">
+				</div>
+				<div class="ActionButtons" id="ActionButtonsBrowsetab">
+					<button id="WritteBrowseTab" onclick="WritteBrowseTab()">Write</button>
+					<input type="text" id="BrowseTabUserText">
+					<button id="RefreshHomeTab" onclick="RefreshBrowseTab()">Refresh</button>
+				</div>
+			</div>
+			<div id="BrowseWho">
+				<input type="text" id="BrowseWhoEmail" > 
+				<button id="FetchButton" onclick="FetchUserData()">Fetch</button>
+			</div>
+		</div>
+		</script>
+		<script type="text/view">
+		<div id="ExtraMessage">
+		</div>
+		</script>
+	</head>
+	<body>
+		<div id="MainBox">
+		</div>
+		<div id="MenuBox">
+		</div>
+		<div id="MessageBox">
+		</div>
+		<!--Welcome view -->
+		
+	</body>
+</html>
